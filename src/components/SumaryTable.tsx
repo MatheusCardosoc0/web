@@ -25,11 +25,11 @@ const SumaryTable = () => {
       <div className='grid grid-rows-7 grid-flow-col gap-3'>
         
        {SumaryDates.map(date => (
-        <HabitDay key={date.toString()} />
+        <HabitDay amount={5} completed={4} key={date.toString()} />
        ))}
 
        {amountOfDaysToFill > 0 && Array.from({length: amountOfDaysToFill}).map((a,i) => (
-        <HabitDay key={i} opacity={true} />
+        <HabitDay amount={0} completed={0}  key={i} opacity={true} />
        ))}
       </div>
     </div>
